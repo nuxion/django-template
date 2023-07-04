@@ -25,6 +25,7 @@ classifiers = [
 ]
 dependencies = [
 	"Django~=4.2.3",
+	"djangorestframework~=3.14.0"
 ]
 dynamic = ["version"]
 
@@ -59,6 +60,7 @@ dependencies = [
   "sphinx-rtd-theme",
   "httpx",
   "ipython",
+  "django-stubs",
 ]
 
 
