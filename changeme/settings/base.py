@@ -13,7 +13,9 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+print("BASE_DIR: ", BASE_DIR)
+# sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "apps.accounts",
 ]
 
 MIDDLEWARE = [
@@ -79,6 +82,7 @@ WSGI_APPLICATION = "changeme.wsgi.application"
 # }
 
 
+AUTH_USER_MODEL = "accounts.CustomUser"
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 

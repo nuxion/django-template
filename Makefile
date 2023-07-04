@@ -81,7 +81,7 @@ publish:
 	echo "Not implemented"
 
 create-app:
-	mkdir apps/${NAME}
+	mkdir -p apps/${NAME}
 	python3 manage.py startapp ${NAME} apps/${NAME}
 
 run:
@@ -89,5 +89,9 @@ run:
 
 secret-key:
 	python3 -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+
+admin:
+	python3 manage.py createsuperuser
+
 
 
