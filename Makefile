@@ -43,11 +43,14 @@ lock-extra:
 	# as example, replace extra with the realname
 	hatch run pip-compile --extra extra -o requirements.extra.txt  pyproject.toml
 
+lock-jupyter:
+	hatch run pip-compile --extra jupyter -o requirements.jupyter.txt  pyproject.toml
+
 lint:
-	pylint --disable=R,C,W services --ignore-paths=services/files
+	pylint --disable=R,C,W apps 
 
 check:
-	mypy -p services --exclude services.files
+	mypy -p apps --exclude tests
 
 black:
 	black services tests

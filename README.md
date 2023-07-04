@@ -38,6 +38,7 @@ After that run `rename.sh` script to refactor folders and names to the new one:
 - linting tools
 - By default use a custom user from the BaseUser.   
 - DRF implemented
+- Dockerfile
 
 
 ## Creating apps
@@ -63,6 +64,7 @@ Settings are splited into environments.
 ## References
 
 - https://waylonwalker.com/hatch-version/
+- https://fly.io/django-beats/deploying-django-to-production/
 
 ## License
 
