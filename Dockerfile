@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=3.10
+ARG PYTHON_VERSION=3.9
 FROM python:$PYTHON_VERSION-slim as builder
 # LABEL maintainer="Xavier Petit <nuxion@gmail.com>"
 MAINTAINER Xavier Petit <nuxion@gmail.com>

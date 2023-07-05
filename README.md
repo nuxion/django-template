@@ -65,6 +65,7 @@ Settings are splited into environments.
 
 - https://waylonwalker.com/hatch-version/
 - https://fly.io/django-beats/deploying-django-to-production/
+- if ERROR: Could not build wheels for backports-zoneinfo, which is required to install pyproject.toml-based projects, check https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta
 
 ## License
 
