@@ -73,6 +73,7 @@ Settings are splited into environments.
 - if ERROR: Could not build wheels for backports-zoneinfo, which is required to install pyproject.toml-based projects, check https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta
 - svg icons: https://chenhuijing.com/blog/the-many-methods-for-using-svg-icons/
 - [django htmx patterns](https://github.com/spookylukey/django-htmx-patterns)
+- [static howto](https://django.how/basics/django-collectstatic/)
 
 
 ## License

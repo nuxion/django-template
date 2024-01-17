@@ -485,3 +485,4 @@ db.sqlite
 test_app/
 *.sqlite
 */settings/local.py
+public/

@@ -96,5 +96,8 @@ secret-key:
 admin:
 	python3 manage.py createsuperuser
 
+static: 
+	python3 manage.py collectstatic
+
 
 

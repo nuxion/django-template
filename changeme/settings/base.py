@@ -122,6 +122,10 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+# deployment
+# Set the STATIC_ROOT setting to the directory from which
+# you’d like to serve these files, for example:
+STATIC_ROOT = "public/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

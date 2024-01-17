@@ -37,4 +37,5 @@ ENV BASE_PATH /app
 ENV DATA_DIR /app/data
 ENV PATH=$PATH:/home/app/.local/bin
 ENV PYTHONPATH /app
+ENV DJANGO_MODULE_SETTINGS="changeme.settings.prod"
 CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "changeme.wsgi"] 
