@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Django template{% endblock %}</title>
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'vendors/pico/1.5.11/pico.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    {% endblock %}
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="{% url 'home_index' %}" <strong>Django</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="{% url 'home_login' %}" role="button">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      {% block content %}
+      {% endblock %}
+    </main>
+    <!-- footer class="footer"-->
+    <footer class="container">
+      Check out <a href="https://github.com/nuxion/django-template">https://github.com/nuxion/django-template</a>
+    </footer>
+
+  </body>
+</html>

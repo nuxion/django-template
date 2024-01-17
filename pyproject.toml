@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "changeme"
 description = ''
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 license = "MIT"
 keywords = []
 authors = [
@@ -15,17 +15,14 @@ authors = [
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
+	# "Django~=5.0.1",
 	"Django~=4.2.3",
-	"djangorestframework~=3.14.0",
         "gunicorn~=20.1.0",
 ]
 dynamic = ["version"]
@@ -47,6 +44,7 @@ path = "changeme/__about__.py"
 
 
 [tool.hatch.envs.default]
+python="3.10" 
 dependencies = [
   "pytest",
   "pytest-asyncio",
@@ -62,7 +60,8 @@ dependencies = [
   "httpx",
   "ipython",
   "django-stubs",
-  "pip-tools"
+  "pip-tools",
+  "pytest-django~=4.7.0"
 ]
 
 

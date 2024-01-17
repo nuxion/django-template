@@ -37,7 +37,6 @@ After that run `rename.sh` script to refactor folders and names to the new one:
 - jupyter as optional dependency + jupytext
 - linting tools
 - By default use a custom user from the BaseUser.   
-- DRF implemented
 - Dockerfile
 
 
@@ -61,11 +60,20 @@ Settings are splited into environments.
 - `local.py`: never commited, you can rename `local.example.py` to start 
 - `dev.py`, `test.py` and `prod.py`
 
+## TODO
+
+- [] check https://github.com/tjwalch/django-livereload-server
+- [] htmx ?
+- [] django debug toolbar
+
 ## References
 
 - https://waylonwalker.com/hatch-version/
 - https://fly.io/django-beats/deploying-django-to-production/
 - if ERROR: Could not build wheels for backports-zoneinfo, which is required to install pyproject.toml-based projects, check https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta
+- svg icons: https://chenhuijing.com/blog/the-many-methods-for-using-svg-icons/
+- [django htmx patterns](https://github.com/spookylukey/django-htmx-patterns)
+
 
 ## License
 
