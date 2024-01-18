@@ -24,6 +24,8 @@ dependencies = [
 	# "Django~=5.0.1",
 	"Django~=4.2.3",
         "gunicorn~=20.1.0",
+	# brotli: all major browsers (except IE11).
+	"whitenoise[brotli]~=6.6.0"
 ]
 dynamic = ["version"]
 

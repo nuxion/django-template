@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
 ]
 
@@ -49,6 +50,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # always keep it at the end
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "changeme.urls"
@@ -127,6 +130,15 @@ STATICFILES_DIRS = [
 # Set the STATIC_ROOT setting to the directory from which
 # you’d like to serve these files, for example:
 STATIC_ROOT = "public/"
+
+STORAGES = {
+    # ...
+    "staticfiles": {
+        # requires maps files
+        # "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage", 
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
