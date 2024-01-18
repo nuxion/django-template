@@ -65,7 +65,7 @@ Settings are splited into environments.
 - [] check https://github.com/tjwalch/django-livereload-server
 - [] htmx ?
 - [] django debug toolbar
-- [] sitemap
+- [x] sitemap
 - [] rss fead
 
 ## References

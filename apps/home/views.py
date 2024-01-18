@@ -9,6 +9,12 @@ def index(request):
     # return HttpResponse("Hello, world. You're at the account index")
     return render(request, "home/index.html")
 
+
+def about(request):
+    return render(request, "home/about.html")
+
+
+
 def login_h(request):
     # return HttpResponse("Hello, world. You're at the account index")
     if request.method == 'POST':
