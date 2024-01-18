@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     {% endblock %}
   </head>
-  <body>
+  <!-- took form https://github.com/spookylukey/django-htmx-patterns/blob/master/posts.rst -->
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
     <header class="container">
       <nav>
         <ul>

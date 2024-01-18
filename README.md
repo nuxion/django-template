@@ -65,6 +65,8 @@ Settings are splited into environments.
 - [] check https://github.com/tjwalch/django-livereload-server
 - [] htmx ?
 - [] django debug toolbar
+- [] sitemap
+- [] rss fead
 
 ## References
 
@@ -74,6 +76,7 @@ Settings are splited into environments.
 - svg icons: https://chenhuijing.com/blog/the-many-methods-for-using-svg-icons/
 - [django htmx patterns](https://github.com/spookylukey/django-htmx-patterns)
 - [static howto](https://django.how/basics/django-collectstatic/)
+- [Views the right view](https://spookylukey.github.io/django-views-the-right-way/)
 
 
 ## License
