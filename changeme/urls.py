@@ -31,5 +31,6 @@ urlpatterns = [
         sitemap,
         {"sitemaps": sitemaps},
         name="django.contrib.sitemaps.views.sitemap",
-    )
+    ),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]

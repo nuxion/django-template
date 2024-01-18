@@ -62,7 +62,7 @@ Settings are splited into environments.
 
 ## TODO
 
-- [] check https://github.com/tjwalch/django-livereload-server
+- [x] check https://github.com/tjwalch/django-livereload-server # used https://github.com/adamchainz/django-browser-reload 
 - [] htmx ?
 - [] django debug toolbar
 - [x] sitemap

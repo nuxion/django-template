@@ -63,7 +63,8 @@ dependencies = [
   "ipython",
   "django-stubs",
   "pip-tools",
-  "pytest-django~=4.7.0"
+  "pytest-django~=4.7.0",
+  "django-browser-reload"
 ]
 
 
