@@ -17,7 +17,7 @@ export USAGE
 .EXPORT_ALL_VARIABLES:
 GIT_TAG := $(shell git describe --tags)
 BUILD := $(shell git rev-parse --short HEAD)
-VERSION := $(shell hatch version)
+VERSION := $(shell poetry version -s)
 PROJECTNAME := $(shell basename "$(PWD)")
 DOCKERID = $(shell echo "nuxion")
 IP=127.0.0.1
@@ -37,14 +37,8 @@ clean:
 	rm -rf docker/all/dist
 
 lock:
-	hatch run pip-compile -o requirements.txt  pyproject.toml
-
-lock-extra:
-	# as example, replace extra with the realname
-	hatch run pip-compile --extra extra -o requirements.extra.txt  pyproject.toml
-
-lock-jupyter:
-	hatch run pip-compile --extra jupyter -o requirements.jupyter.txt  pyproject.toml
+	# requires https://github.com/python-poetry/poetry-plugin-export
+	poetry export -f requirements.txt --output requirements.txt
 
 lint:
 	poetry run ruff check
@@ -52,13 +46,8 @@ lint:
 check:
 	mypy -p apps --exclude tests
 
-black:
-	black services tests
-
-isort:
-	isort services tests --profile=black
-
-format: isort black
+format:
+	poetry run ruff check --fix
 
 .PHONY: test
 test:
@@ -66,7 +55,7 @@ test:
 
 .PHONY: docs-server
 docs-serve:
-	hatch run sphinx-autobuild docs/source docs/build/html --port 9292 --watch ./
+	poetry run sphinx-autobuild docs/source docs/build/html --port 9292 --watch ./
 
 ## Standard commands for CI/CD cycle
 
