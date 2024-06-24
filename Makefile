@@ -47,7 +47,7 @@ lock-jupyter:
 	hatch run pip-compile --extra jupyter -o requirements.jupyter.txt  pyproject.toml
 
 lint:
-	pylint --disable=R,C,W apps 
+	poetry run ruff check
 
 check:
 	mypy -p apps --exclude tests
