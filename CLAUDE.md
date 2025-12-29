@@ -11,7 +11,7 @@ Django template project for starting new Django applications. Uses email-based a
 ```bash
 # Development
 make run                    # Run dev server at 127.0.0.1:8000
-make setup                  # Install all dependencies via Poetry
+make setup                  # Install all dependencies via uv
 
 # Testing & Quality
 make test                   # Run pytest with coverage
@@ -76,6 +76,6 @@ Then update `apps/myapp/apps.py` to set `name = "apps.myapp"` and add `"apps.mya
 
 ## Key Dependencies
 - Django 5.x with WhiteNoise for static files
-- Poetry for dependency management
+- uv for dependency management
 - Ruff for linting/formatting, mypy for type checking
 - pytest-django for testing
