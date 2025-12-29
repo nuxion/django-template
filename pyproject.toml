@@ -4,9 +4,9 @@ version = "0.1.0"
 description = ""
 authors = [{name = "nuxion", email = "nuxion@gmail.com"}]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
-    "django>=5.0.6,<6",
+    "django>=6.0,<7",
     "gunicorn>=22.0.0,<23",
     "whitenoise[brotli]>=6.7.0,<7",
 ]

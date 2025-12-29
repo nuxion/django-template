@@ -75,7 +75,7 @@ make create-app NAME=myapp
 Then update `apps/myapp/apps.py` to set `name = "apps.myapp"` and add `"apps.myapp"` to INSTALLED_APPS.
 
 ## Key Dependencies
-- Django 5.x with WhiteNoise for static files
+- Django 6.x with WhiteNoise for static files (requires Python 3.12+)
 - uv for dependency management
 - Ruff for linting/formatting, mypy for type checking
 - pytest-django for testing
